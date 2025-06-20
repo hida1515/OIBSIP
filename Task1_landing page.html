@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduLearn - Empower Your Future</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', sans-serif; color: #333; line-height: 1.6;}
+
+    nav {
+      background: #0066cc;
+      color: rgb(195, 178, 178);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      font-size: 1.8rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: rgb(170, 155, 155);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e') no-repeat center center/cover;
+      height: 90vh;
+      color: rgb(223, 211, 211);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    header h2 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #cc5200;
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0066cc;
+    }
+
+    .about, .features, .courses, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .feature, .course, .testimonial {
+      flex: 1 1 250px;
+      background: #c3baba;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .course img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .testimonial {
+      font-style: italic;
+    }
+
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      background: #f1f1f1;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #333;
+      color: rgb(27, 20, 20);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>EduLearn</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h2> EduLearn</h2>
+    <p>Join thousands of learners worldwide. Learn anytime, anywhere.</p>
+    <a href="#courses" class="btn">Get Started</a>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <p style="max-width:800px; text-align:center;">
+        EduLearn is a modern learning platform offering top-quality courses across technology, business, and design. We connect you with expert instructors and real-world projects to ensure impactful learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <h2>Why EduLearn?</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="mentor icon">
+        <h3>Top Instructors</h3>
+        <p>Learn from professionals with years of real-world experience.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1087/1087925.png" alt="flexible icon">
+        <h3>Flexible Learning</h3>
+        <p>Access content anytime, at your pace, from any device.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="certificate icon">
+        <h3>Certifications</h3>
+        <p>Earn credentials that showcase your achievement and skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses">
+    <h2>Our Top Courses</h2>
+    <div class="courses">
+
+      <div class="course">
+   <img src="th (2).jpeg" alt="UI UX">
+        
+        <h3>Full Stack Web Development</h3>
+        <p>HTML, CSS, JavaScript, React, Node & MongoDB</p>
+      </div>
+      <div class="course">
+           <img src="th.jpeg" alt="UI UX">
+        <h3>Data Science with Python</h3>
+        <p>Pandas, NumPy, ML Models & Data Visualization</p>
+      </div>
+      <div class="course">
+        <img src="th (1).jpeg" alt="UI UX">
+        <h3>UI/UX Design Essentials</h3>
+        <p>Figma, Wireframes, Prototypes, User Testing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Learners Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"EduLearn helped me change careers. The web dev course was top-notch!"</p>
+        <img src="th.jpeg" alt="user">
+        <strong>- Ayesha, Developer</strong>
+      </div>
+      <div class="testimonial">
+        <p>"I loved the flexibility. I could study after work and earn a certificate!"</p>
+        <img src="th (2).jpeg" alt="user">
+        <strong>- Rahul, Analyst</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" required>
+        <label>Email</label>
+        <input type="email" placeholder="Your Email" required>
+        <label>Message</label>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EduLearn. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
