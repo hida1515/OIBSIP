@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top left, #eef2f3, #8e9eab);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px 25px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .unit-selection {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .unit-selection label {
+      font-size: 0.9rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+    }
+
+    .unit-selection input {
+      margin-right: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #222;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #444;
+      text-align: center;
+    }
+
+    @media(max-width: 500px) {
+      .unit-selection {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" data-aos="fade-up">
+    <h2>Temperature Converter</h2>
+    <input type="number" id="tempInput" placeholder="Enter temperature" />
+
+    <div class="unit-selection">
+      <label><input type="radio" name="unit" value="celsius" checked /> Celsius</label>
+      <label><input type="radio" name="unit" value="fahrenheit" /> Fahrenheit</label>
+      <label><input type="radio" name="unit" value="kelvin" /> Kelvin</label>
+    </div>
+
+    <button onclick="convertTemperature()">Convert</button>
+    <div class="result" id="outputResult"></div>
+  </div>
+
+  <footer data-aos="fade-up">Made by HIDA TK | © 2025</footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function convertTemperature() {
+      const input = parseFloat(document.getElementById('tempInput').value);
+      const unit = document.querySelector('input[name="unit"]:checked').value;
+      const output = document.getElementById('outputResult');
+
+      if (isNaN(input)) {
+        output.innerHTML = "Please enter a valid number.";
+        return;
+      }
+
+      let resultHTML = '';
+
+      if (unit === 'celsius') {
+        resultHTML = `
+          ${input} °C = ${(input * 9 / 5 + 32).toFixed(2)} °F<br/>
+          ${input} °C = ${(input + 273.15).toFixed(2)} K
+        `;
+      } else if (unit === 'fahrenheit') {
+        const c = (input - 32) * 5 / 9;
+        resultHTML = `
+          ${input} °F = ${c.toFixed(2)} °C<br/>
+          ${input} °F = ${(c + 273.15).toFixed(2)} K
+        `;
+      } else if (unit === 'kelvin') {
+        const c = input - 273.15;
+        resultHTML = `
+          ${input} K = ${c.toFixed(2)} °C<br/>
+          ${input} K = ${((c * 9 / 5) + 32).toFixed(2)} °F
+        `;
+      }
+
+      output.innerHTML = resultHTML;
+    }
+  </script>
+</body>
+</html>
