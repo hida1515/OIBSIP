@@ -21,7 +21,7 @@ This repository contains three front-end web development projects completed as p
 
 ## 👤 Project 2: HIDA TK – Personal Portfolio
 
-📄 *File*: task2.html  
+📄 *File*:Task2_portfolio.html 
 🎯 *Objective*: Create a modern, animated personal portfolio with all essential sections.
 
 ### 🔍 Features
@@ -31,13 +31,13 @@ This repository contains three front-end web development projects completed as p
 - Social media and contact integration.
 - Mobile responsive design.
 
-🖼 *Profile Image*: hida.jpeg (make sure to include the image in your repo)
+🖼 *Profile Image*: picture.jpeg (make sure to include the image in your repo)
 
 ---
 
 ## 🌡 Project 3: Temperature Converter App
 
-📄 *File*: temperature3.html  
+📄 *File*: Task3_temperature.html  
 🎯 *Objective*: Develop a simple, user-friendly temperature converter tool.
 
 ### 🔍 Features
@@ -54,10 +54,10 @@ No installation is needed. Just follow the steps below:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/oasisinfobyte-internship.git
-cd oasisinfobyte-internship
+git clone https://github.com/your-username/OIBSIP.git
+cd OIBSIP
 
 # Open any project in your browser
 open landingpage1.html
-open task2.html
-open temperature3.html
+open Task2_portfolio.htmll
+open Task3_temperature.html
